@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+int l1,l2,l3;
+    scanf("%d",&l1);
+     scanf("%d",&l2);
+     scanf("%d",&l3);
+    if(l1>0 && l2>0 && l3>0)
+    {
+        if(l1+l2>l3 && l1+l3>l2 && l2+l3>l1)
+   {
+       if(l1==l2 && l2==l3 )
+       {
+           printf("Lengths: [%d, %d, %d]\n",l1,l2 ,l3);
+           printf("Type: Equilateral\n");
+           printf("All sides are of the same length.");
+       }
+       else if(l1==l2 || l1==l3 ||l2==l3)
+            {
+           printf("Lengths: [%d, %d, %d]\n",l1,l2 ,l3);
+           printf("Type: Isosceles\n");
+           printf("Exactly two sides are equal.");
+       }
+       else
+             {
+           printf("Lengths: [%d, %d, %d]\n",l1,l2 ,l3);
+           printf("Type: Scalene\n");
+           printf("All sides are of different lengths.");
+       }
+          
+           
+   }
+    else
+         {
+           printf("Lengths: [%d, %d, %d]\n",l1,l2 ,l3);
+           printf("Type: Invalid\n");
+           printf("Cannot form a valid shape.");
+       }
+    }
+   
+    return 0;
+}
